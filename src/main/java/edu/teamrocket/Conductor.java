@@ -6,9 +6,9 @@ public class Conductor {
     private String nombre;
     private String modelo;
     private String matricula;
-    private double valoracionMedia;
+    private double valoracionMedia = 0;
     private boolean ocupado;
-    private ArrayList<Byte> valoraciones;
+    private ArrayList<Byte> valoraciones = new ArrayList<>();
 
     public Conductor() {
 
@@ -43,11 +43,11 @@ public class Conductor {
     }
 
     public void  setValoracion(byte valoracion) {
-        getValoraciones().add(valoracion);
+        valoraciones.add(valoracion);
     }
 
     public double getValoracion() {
-        return 0.0;
+        return calcularValoracionMedia();
     }
 
     public int getNumeroValoraciones() {
@@ -55,13 +55,11 @@ public class Conductor {
     }
 
     private double calcularValoracionMedia() {
-        double totalSumaCalificacion = 0;
 
         for (byte valoracion : getValoraciones()) {
-            totalSumaCalificacion += valoracion;
+            this.valoracionMedia += valoracion;
         }
-        totalSumaCalificacion = totalSumaCalificacion / getNumeroValoraciones();
-        return totalSumaCalificacion;
+        return this.valoracionMedia / getNumeroValoraciones();
     }
 
     public void setOcupado(boolean ocupado) {
