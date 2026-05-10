@@ -10,6 +10,7 @@ public class Carrera {
     private int tiemporCarrera;
     private double costeTotal;
     private int propina;
+    private Conductor conductor;
 
     public Carrera(String tarjetaCredito) {
         this.tarjetaCredito = tarjetaCredito;
