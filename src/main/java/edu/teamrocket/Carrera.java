@@ -84,7 +84,6 @@ public class Carrera {
 
     public void liberarConductor() {
         this.conductor.setOcupado(false);
-        this.conductor = null;
     }
 
     public int getPropina() {
