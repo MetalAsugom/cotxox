@@ -86,4 +86,12 @@ public class Carrera {
         this.conductor.setOcupado(false);
         this.conductor = null;
     }
+
+    public int getPropina() {
+        return this.propina;
+    }
+
+    public double getCosteTotal() {
+        return this.costeTotal;
+    }
 }
