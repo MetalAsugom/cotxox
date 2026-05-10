@@ -60,15 +60,30 @@ public class Carrera {
         return this.tiemporCarrera;
     }
 
-    
-    
-    
+    public double getCosteEsperado() {
+        return Tarifa.getCosteTotal(this);
+    }
 
-    
+    public Conductor getConductor() {
+        return conductor;
+    }
 
-    
+    public void asignarConductor(PoolConductores conductores) {
+        this.conductor = conductores.asignarConductor();
+        this.conductor.setOcupado(true);
+    }
 
-    
+    public void realizarPago(double pago) {
+        this.costeTotal += pago;
+    }
 
+    public void recibirPropina(int propina) {
+        this.propina = propina;
+        this.costeTotal += propina;
+    }
 
+    public void liberarConductor() {
+        this. conductor.setOcupado(false);
+        this.conductor = null;
+    }
 }
