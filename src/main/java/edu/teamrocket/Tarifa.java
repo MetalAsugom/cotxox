@@ -19,7 +19,13 @@ public class Tarifa {
     }
 
     public static double getCosteTotal(Carrera carrera) {
-        return getCosteDistancia(carrera.getDistancia()) +
-                getCosteTiempo(carrera.getTiempoEsperado());
+
+        if (getCosteDistancia(carrera.getDistancia()) +
+                getCosteTiempo(carrera.getTiempoEsperado()) < 5) {
+            return COTE_MINIMO;
+        } else {
+            return getCosteDistancia(carrera.getDistancia()) +
+                    getCosteTiempo(carrera.getTiempoEsperado());
+        }
     }
 }
