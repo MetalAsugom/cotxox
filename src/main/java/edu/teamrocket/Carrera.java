@@ -83,7 +83,7 @@ public class Carrera {
     }
 
     public void liberarConductor() {
-        this. conductor.setOcupado(false);
+        this.conductor.setOcupado(false);
         this.conductor = null;
     }
 }
