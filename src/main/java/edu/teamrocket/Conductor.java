@@ -1,6 +1,7 @@
 package edu.teamrocket;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Conductor {
     private String nombre;
@@ -38,7 +39,7 @@ public class Conductor {
         this.matricula = matricula;
     }
 
-    public ArrayList<Byte> getValoraciones() {
+    public List<Byte> getValoraciones() {
         return this.valoraciones;
     }
 
@@ -74,5 +75,4 @@ public class Conductor {
             return this.ocupado;
         }
     }
-
 }
