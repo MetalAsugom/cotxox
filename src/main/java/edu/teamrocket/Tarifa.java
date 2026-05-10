@@ -4,7 +4,7 @@ public class Tarifa {
 
     protected static final double COSTE_MILLA = 1.35;
     protected static final double COSTE_MINUTO = 0.35;
-    protected static final double COTE_MINIMO = 5;
+    protected static final double COSTE_MINIMO = 5;
     protected static final double PORCENTAJE_COMISION = 0.20;
 
     private Tarifa() {
@@ -22,7 +22,7 @@ public class Tarifa {
 
         if (getCosteDistancia(carrera.getDistancia()) +
                 getCosteTiempo(carrera.getTiempoEsperado()) < 5) {
-            return COTE_MINIMO;
+            return COSTE_MINIMO;
         } else {
             return getCosteDistancia(carrera.getDistancia()) +
                     getCosteTiempo(carrera.getTiempoEsperado());
