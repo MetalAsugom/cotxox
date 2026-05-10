@@ -79,7 +79,6 @@ public class Carrera {
 
     public void recibirPropina(int propina) {
         this.propina = propina;
-        this.costeTotal += propina;
     }
 
     public void liberarConductor() {
