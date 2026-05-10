@@ -42,7 +42,7 @@ public class Conductor {
         return this.valoraciones;
     }
 
-    public void  setValoracion(byte valoracion) {
+    public void setValoracion(byte valoracion) {
         valoraciones.add(valoracion);
     }
 
@@ -69,22 +69,10 @@ public class Conductor {
     public boolean isOcupado() {
         if (this.ocupado) {
             return this.ocupado;
-        }
-        else {
+        } else {
             setOcupado(false);
             return this.ocupado;
         }
     }
-
-    
-
-    
-
-    
-
-    
-
-    
-
 
 }
